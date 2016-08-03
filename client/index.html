@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" ng-app="application" ng-controller='galleryCtrl'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>headmade</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <div zf-panel="" id="panel">
+      <a zf-close="" class="close-button">×</a>
+      <div class="nav-wrapper">
+        <h3>Hello,</h3>
+        <p>Vestibulum commodo volutpat a, 
+            convallis ac, laoreet enim.<br> 
+            Phasellus fermentum in, dolor.
+        </p>
+        <p>Pellentesque facilisis.<br> 
+          Nulla imperdiet sit amet magna.
+        </p>
+        <div class="grid-block social-big">
+          <a href=""><i class='fa fa-dribbble'></i></a>
+          <a href=""><i class='fa fa-linkedin'></i></a>
+          <a href=""><i class='fa fa-instagram'></i></a>
+          <a href=""><i class='fa fa-twitter'></i></a>
+        </div>
+        <hr>
+        <div class="grid-block vertical">
+          <a href="#!">Home</a>
+          <a href="">Posts</a>
+          <a href="#!/#gallery">Gallery</a>
+          <a href="#!/#footer">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <section class='search-overlay' ng-show='toggleOverlay'>
+      <div class="grid-container">
+        <div class="grid-block search-input">
+          <i class="fa fa-search"></i>
+          <input type="text" ng-model='tags' placeholder="Type something...">
+          <input type='image' src='assets/img/return-btn.png' ng-click='toggleOverlay=false'>
+        </div>
+        <div class='grid-content examples'>
+          user interface design <br> 
+          user experience design <br>
+          design inspirations
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-container">
+      <header id='home'>
+        <div class="grid-block search-bars">
+          <div class="grid-block shrink">
+            <i class="fa fa-bars" zf-open="panel"></i>
+          </div>
+          <div class="grid-block shrink search" zf-close='panel' ng-click="toggleOverlay = !toggleOverlay; tags = undefined">
+            <i class='fa fa-search'></i>
+            <span>Search...</span>
+          </div>
+        </div>
+        <div class="grid-block social-big">
+          <a href=""><i class='fa fa-dribbble'></i></a>
+          <a href=""><i class='fa fa-linkedin'></i></a>
+          <a href=""><i class='fa fa-instagram'></i></a>
+          <a href=""><i class='fa fa-twitter'></i></a>
+        </div>
+        <h1>CONSTELLATION</h1>
+        <p>If I create from the heart, nearly everything works; if from the head, almost nothing.</p>
+      </header>
+
+      <section id='gallery' ui-view>
+      </section>
+
+      <footer id='footer'>
+        <div class="grid-block social-big">
+          <a href=""><i class='fa fa-dribbble'></i></a>
+          <a href=""><i class='fa fa-linkedin'></i></a>
+          <a href=""><i class='fa fa-instagram'></i></a>
+          <a href=""><i class='fa fa-twitter'></i></a>
+        </div>
+        <div class="grid-content">
+          <p>Made with love at EL Passion 2014 <br> This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

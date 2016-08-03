@@ -1,0 +1,37 @@
+#panel {
+	background-color: #181818;
+	width: 40rem;
+	.close-button {
+		color: white;
+		top: 2.5rem;
+		right: 2rem;
+		font-size: 4rem;
+	}
+	&.panel-left.is-active {
+		box-shadow: none;
+	}
+	.nav-wrapper {
+		margin-top: 10.5rem;
+		margin-left: 20%;
+		margin-right: 13.75%;
+		h3 {
+			margin-bottom: 2.6rem;
+		}
+		p {
+			width: 80%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.social-big {
+			margin-top: 4rem;
+			justify-content: flex-start;
+		}
+		hr {
+			margin: 5rem 0;
+		}
+		.vertical a {
+			margin-bottom: 4rem;
+		}
+	}
+}

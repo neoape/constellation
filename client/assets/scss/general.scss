@@ -1,0 +1,27 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+html, body {
+	height: initial;
+}
+body {
+	background-image: url('../img/bg-lines2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 0%;
+}
+span {
+	overflow: hidden;
+}
+.social-big {
+	overflow: visible;
+	justify-content: center;
+	margin-top: 10rem;
+	a {
+		margin-right: 3rem;
+		&:last-child {
+		margin-right: 0;
+		}
+	}
+}
+

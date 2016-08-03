@@ -1,0 +1,32 @@
+---
+name: home
+url: /
+---
+
+<div class="grid-block medium-up-4 small-up-2">
+  <div class="grid-block vertical gallery-items" ng-repeat='galleryItem in galleryItems | filter: tag | limitTo: limited' >
+    <div class="grid-block" ng-mouseover='hoverInfo = true' ng-mouseleave='hoverInfo = false'>
+      <a href='#' ui-sref="galelem" class='gallery-element grid-block vertical'>
+        <span class='preview'>{{galleryItem.tags | divideTags}}</span>
+				<p>{{galleryItem.text}}</p>
+        <div ng-show='hoverInfo' class='hover-info grid-block vertical'>
+        	<span class='on-hover'>{{galleryItem.tags | divideTags}}</span>
+        	<span class='view'>View Gallery</span>
+        </div>
+      </a>
+    </div>
+    <hr>
+    <div class="grid-block">
+      <div class="grid-block meta"><span>{{galleryItem.date}} &nbsp;/&nbsp;<span class='comments'> {{galleryItem.comments}} Comments</span></span></div>
+      
+      <div class="grid-block social-small ">
+        <a href=""><i class='fa fa-envelope'></i></a>
+        <a href=""><i class='fa fa-facebook'></i></a>
+        <a href=""><i class='fa fa-twitter'></i></a>
+      </div>        
+    </div>
+  </div>
+</div>
+<div class="grid-block more-posts" ng-click='loadMore()'>
+ 	<span>{{moreLess}} POSTS</span>
+</div>      

@@ -1,0 +1,37 @@
+.search-overlay {
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	position: fixed;
+	z-index: 1;
+	opacity: 0.93;
+	.grid-container {
+		margin-top: 27rem;
+		width: 90rem;
+		.examples {
+			margin-top: 3rem;
+		}
+		.search-input {
+			border-bottom: 2px solid black;
+			padding-bottom: 0.4rem;
+			input[type='text'] {
+				border: none;
+				margin: 0;
+				padding: 0;
+				padding-left: 2rem;
+				height: 3.6rem;
+			}
+			input[type='image'] {
+					height: 1.6rem;
+					margin: auto 0;
+					&:focus{
+						outline: none;
+					}
+			}
+			i {
+				margin-left: 1.4rem;
+				padding-top: 4px;
+			}
+		}
+	}
+}
